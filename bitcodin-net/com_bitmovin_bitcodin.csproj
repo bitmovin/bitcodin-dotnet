@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A994367-0AD5-40C6-9D95-64029419900F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.bitmovin.bitcodin</RootNamespace>
+    <AssemblyName>bitcodin-csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Billing\InvoiceInformation.cs" />
+    <Compile Include="Api\BitcodinApi.cs" />
+    <Compile Include="Api\Exception\BitcodinApiException.cs" />
+    <Compile Include="Api\Exception\BitCodingWebExceptionMessage.cs" />
+    <Compile Include="Api\Input\AzureInputConfig.cs" />
+    <Compile Include="Api\Input\HttpInputConfig.cs" />
+    <Compile Include="Api\Input\Input.cs" />
+    <Compile Include="Api\Input\InputList.cs" />
+    <Compile Include="Api\Input\InputType.cs" />
+    <Compile Include="Api\Input\FTPInputConfig.cs" />
+    <Compile Include="Api\Input\GCSInputConfig.cs" />
+    <Compile Include="Api\Input\S3InputConfig.cs" />
+    <Compile Include="Api\Job\AbstractDrmConfig.cs" />
+    <Compile Include="Api\Job\AudioMetaData.cs" />
+    <Compile Include="Api\Job\CombinedDrmConfig.cs" />
+    <Compile Include="Api\Job\DrmMethod.cs" />
+    <Compile Include="Api\Job\DrmSystem.cs" />
+    <Compile Include="Api\Job\HlsEncryptionConfig.cs" />
+    <Compile Include="Api\Job\HlsMethod.cs" />
+    <Compile Include="Api\Job\Job.cs" />
+    <Compile Include="Api\Job\JobConfig.cs" />
+    <Compile Include="Api\Job\JobDetails.cs" />
+    <Compile Include="Api\Job\JobList.cs" />
+    <Compile Include="Api\Job\JobStatus.cs" />
+    <Compile Include="Api\Job\ManifestType.cs" />
+    <Compile Include="Api\Job\ManifestUrls.cs" />
+    <Compile Include="Api\Job\MergeAudioChannelConfig.cs" />
+    <Compile Include="Api\Job\PlayReadyDrmConfig.cs" />
+    <Compile Include="Api\Job\Speed.cs" />
+    <Compile Include="Api\Job\VideoMetaData.cs" />
+    <Compile Include="Api\Job\WidevineDrmConfig.cs" />
+    <Compile Include="Api\Manifest\VttHls.cs" />
+    <Compile Include="Api\Manifest\VttHlsConfig.cs" />
+    <Compile Include="Api\Manifest\VttMpd.cs" />
+    <Compile Include="Api\Manifest\VttMpdConfig.cs" />
+    <Compile Include="Api\Manifest\VttSubtitle.cs" />
+    <Compile Include="Api\Media\AudioStreamConfig.cs" />
+    <Compile Include="Api\Media\CroppingConfig.cs" />
+    <Compile Include="Api\Media\EncodingProfile.cs" />
+    <Compile Include="Api\Media\EncodingProfileConfig.cs" />
+    <Compile Include="Api\Media\EncodingProfileList.cs" />
+    <Compile Include="Api\Media\Preset.cs" />
+    <Compile Include="Api\Media\Profile.cs" />
+    <Compile Include="Api\Media\Stream.cs" />
+    <Compile Include="Api\Media\VideoCodec.cs" />
+    <Compile Include="Api\Media\VideoStreamConfig.cs" />
+    <Compile Include="Api\Media\WatermarkConfig.cs" />
+    <Compile Include="Api\Output\AzureOutputConfig.cs" />
+    <Compile Include="Api\Output\FtpOutputConfig.cs" />
+    <Compile Include="Api\Output\GCSOutputConfig.cs" />
+    <Compile Include="Api\Output\Output.cs" />
+    <Compile Include="Api\Output\OutputList.cs" />
+    <Compile Include="Api\Output\OutputType.cs" />
+    <Compile Include="Api\Output\S3OutputConfig.cs" />
+    <Compile Include="Api\Output\S3Region.cs" />
+    <Compile Include="Api\Statistics\MonthlyStatistic.cs" />
+    <Compile Include="Api\Statistics\Statistic.cs" />
+    <Compile Include="Api\Thumbnail\Sprite.cs" />
+    <Compile Include="Api\Thumbnail\SpriteConfig.cs" />
+    <Compile Include="Api\Thumbnail\Thumbnail.cs" />
+    <Compile Include="Api\Thumbnail\ThumbnailConfig.cs" />
+    <Compile Include="Api\Transfer\Transfer.cs" />
+    <Compile Include="Api\Transfer\TransferConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitmovin.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
