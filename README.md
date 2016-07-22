@@ -193,10 +193,10 @@ NuGet is a extension for Visual Studio which allows you to search for, install, 
 
 NuGet comes installed with the more recent versions of Visual Studio, but you can download it from [here] (https://docs.nuget.org/consume/installing-nuget) if you don’t already have it.
 
-##Install bitcodin-csharp via Package Manager Console
-To install bitcodin-csharp, run the following command in the Package Manager Console:
+##Install bitcodin-dotnet via Package Manager Console
+To install bitcodin-dotnet, run the following command in the Package Manager Console:
 ```
-    Install-Package bitcodin-csharp -Version 1.0.0
+    Install-Package bitcodin-dotnet -Version 1.0.0
 ```   
 
 ##Managing NuGet Packages Using the Dialog
