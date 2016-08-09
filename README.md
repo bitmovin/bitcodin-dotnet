@@ -15,7 +15,6 @@ Before you can use the bitcodin-c# API wrapper, you need a version of .NET that 
 ###Linux
 
 * The [Mono framework](http://www.mono-project.com/download/#download-lin) runs on Linux. 
-* [.NET Core] (https://www.microsoft.com/net/download#core) is being ported to linux.
 
 ###OS X
 * The [Mono framework](http://www.mono-project.com/download/#download-mac) runs also on OS X. 
