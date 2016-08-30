@@ -227,9 +227,9 @@ namespace com.bitmovin.bitcodin.Api
             Post("job/transfer", config);
         }
 
-        public Transfer.Transfer[] ListTransfers(TransferConfig id)
+        public Transfer.Transfer[] ListTransfers(int jobId)
         {
-            return Get<Transfer.Transfer[]>($"job/{id}/transfers");
+            return Get<Transfer.Transfer[]>($"job/{jobId}/transfers");
         }
 
         public MonthlyStatistic GetMonthlyStatistic()
