@@ -11,7 +11,7 @@ namespace com.bitmovin.bitcodin.Api.Job
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class CombinedDrmConfig : AbstractDrmConfig
     {
-        [JsonProperty(PropertyName = "kId")]
+        [JsonProperty(PropertyName = "kid")]
         public string KId { get; set; }
 
         [JsonProperty(PropertyName = "key")]
